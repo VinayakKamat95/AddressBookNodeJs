@@ -85,10 +85,16 @@ class Contact {
     }
 
     toString() {
-        return "First Name: " + this.firstName + ", Last Name: " + this.lastName + ", Address: " + this.address + ", City: " + this.city + ", State: "
+        return "\nFirst Name: " + this.firstName + ", Last Name: " + this.lastName + ", Address: " + this.address + ", City: " + this.city + ", State: "
             + this.state + ", Zip: " + this.zip + ", Phone: " + this.phone + ", Email: " + this.email;
     }
 }
 
 let contact = new Contact("Omkar", "Kamat", "Bandra", "Mumbai", "Maharashtra", "400051", "91 9638527445", "omkarkamat@email.com");
-console.log(contact.toString());
+
+let addressBookArray = [];
+
+addressBookArray.push(contact);
+addressBookArray.push(new Contact("Adam", "Khan", "Bandra", "Mumbai", "Maharashtra", "400050", "91 9874563210", "adam@email.com"));
+addressBookArray.push(new Contact("Priya", "Gandhi", "Gandhi Nagar", "ahmadabad", "gujrat", "500040", "91 7418529630", "priya@email.com"));
+console.log(addressBookArray.toString());
