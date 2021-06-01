@@ -98,3 +98,12 @@ addressBookArray.push(contact);
 addressBookArray.push(new Contact("Adam", "Khan", "Bandra", "Mumbai", "Maharashtra", "400050", "91 9874563210", "adam@email.com"));
 addressBookArray.push(new Contact("Priya", "Gandhi", "Gandhi Nagar", "ahmadabad", "gujrat", "500040", "91 7418529630", "priya@email.com"));
 console.log(addressBookArray.toString());
+
+
+let contactToEdit = addressBookArray.find(contact => contact.firstName == "Omkar" && contact.lastName == "Kamat");
+if (contactToEdit != undefined) {
+    contactToEdit.phone = "91 6123456789";
+    console.log("\nUsing arrow => function " + addressBookArray);
+}
+else
+    console.log("\nContact not found");
